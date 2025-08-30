@@ -1,5 +1,5 @@
 import React from "react";
-import useDictionaryStore from "../store/DictionaryStore.js";
+import useDictionaryStore from "../store/dictionaryStore.js";
 import './DefinitionDisplay.css';
 
 // DefinitionDisplay Component: Shows the results, loading state, or error message
