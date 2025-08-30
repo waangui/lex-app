@@ -1,5 +1,6 @@
 import React , { useState } from 'react'
 import { Routes, Route, Link } from 'react-router-dom';
+import { BookOpen } from 'lucide-react';
 import SearchBar from './components/SearchBar'
 import DefinitionDisplay from './components/DefinitionDisplay'
 import About from './components/About';
@@ -27,7 +28,11 @@ function App() {
     <div className="app-container">
       <header className="app-header">
         <Link to="/" onClick={resetSearch} className="header-link">
-          <h1 className='app-title'>LEX Dictionary</h1>
+          <div className="header-content">
+            {/* Use the BookOpen icon component here */}
+            <BookOpen className="logo" />
+            <h1 className='app-title'>LEX Dictionary</h1>
+          </div>
         </Link>
       </header>
 

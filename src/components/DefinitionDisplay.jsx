@@ -16,7 +16,7 @@ function DefinitionDisplay() {
   }
 
   if (!wordData) {
-    return <p>Enter a word to get started.</p>;
+    return <p className="place-holder">Enter a word to get started.</p>;
   }
 
   // Find the first available phonetic text

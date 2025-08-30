@@ -1,4 +1,4 @@
-/* Container for the search form to enable flexbox layout */
+/* Container for the search form  */
 .search-container {
   position: relative;
   display: flex;
@@ -16,7 +16,7 @@
   font-size: 18px;
   color: var(--color-secondary);
   background-color: #fff;
-  border: 3.5px solid var(--color-accent);
+  border: 3px solid var(--color-accent);
   border-radius: 30px; 
   outline: none;
   transition: box-shadow 0.2s ease-in-out;

@@ -1,15 +1,25 @@
+/* Main container for the About page content */
 .definition-container {
-  max-width: 600px ;
+  max-width: 610px ;
   border: 4.5px solid var(--color-secondary);
-  border-radius: 35px; /* rounded corner */
+  border-radius: 35px; 
   padding: 24px;
   background-color: #fff; 
+    
 }
 
-.word-header  {
+.place-holder {
+  font-family: var(--font-franklin);
+  font-size: 1.125rem;
+  color: var(--color-accent);
+  font-weight: 500;
+}
+
+.word-header {
   font-family: var(--font-baskerville);
   font-size: 2rem; /* 48px */
   font-weight: 700;
+  letter-spacing: 0.2rem;
   color: var(--color-dark-text);
   margin: 0;
 }
