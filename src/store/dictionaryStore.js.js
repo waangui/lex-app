@@ -9,10 +9,11 @@ const useDictionaryStore = create((set) => ({
   isLoading: false,
   // Any error that might occur during the API call
   error: null,
+
   // The function to fetch a word's definition
   fetchWord: async (word) => {
     // 1. Set loading state to true and clear previous data/errors
-    set({ isLoading: true, wordData: null, error: null });
+    set({ Loading: true, wordData: null, error: null });
 
     try {
       // 2. Make the API call using axios
