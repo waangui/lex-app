@@ -8,7 +8,6 @@ import useDictionaryStore from './store/dictionaryStore.js';
 import './App.css';
 
 
-/Users/wangui/lex-app/src/store/dictionaryStore.js.js
 // Main App Component: Assembles the other components
 function App() {
   // to reset the search page
