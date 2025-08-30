@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import useDictionaryStore from '../store/DictionaryStore.js';
+import useDictionaryStore from '../store/dictionaryStore.js';
 import './About.css';
 
 function About() {

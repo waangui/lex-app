@@ -4,7 +4,7 @@ import { BookOpen } from 'lucide-react';
 import SearchBar from './components/SearchBar'
 import DefinitionDisplay from './components/DefinitionDisplay'
 import About from './components/About';
-import useDictionaryStore from './store/DictionaryStore.js';
+import useDictionaryStore from './store/dictionaryStore.js';
 import './App.css';
 
 

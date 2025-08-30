@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import useDictionaryStore from "../store/DictionaryStore.js";
+import useDictionaryStore from "../store/dictionaryStore.js";
 import './SearchBar.css';
 
 // SearchBar Component: Handles user input and triggers the searc
