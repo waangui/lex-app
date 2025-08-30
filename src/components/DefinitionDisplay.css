@@ -8,12 +8,14 @@
     
 }
 
+/* Text below search bar when search bar is empty */
 .place-holder {
   font-family: var(--font-franklin);
   font-size: 1.125rem;
   color: var(--color-accent);
   font-weight: 500;
 }
+
 
 .word-header {
   font-family: var(--font-baskerville);
