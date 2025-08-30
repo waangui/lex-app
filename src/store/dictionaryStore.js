@@ -10,24 +10,29 @@ const useDictionaryStore = create((set) => ({
   // Any error that might occur during the API call
   error: null,
 
-  // The function to fetch a word's definition
+  // Async function to fetch word definition from the API
   fetchWord: async (word) => {
-    // 1. Set loading state to true and clear previous data/errors
-    set({ Loading: true, wordData: null, error: null });
+    set({ loading: true, error: null, wordData: null });
+    console.log("Step 1: Search initiated, loading set to true.");
 
     try {
-      // 2. Make the API call using axios
       const response = await axios.get(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`);
       
-      // 3. Update the store with the received data
-      set({ wordData: response.data[0], isLoading: false });
+      // DEBUG: Log the data we received from the API
+      console.log("Step 2: Successfully received data from API:", response.data);
+      
+      console.log("Step 3: Attempting to update state with new data...");
+      set({ wordData: response.data, loading: false });
+      console.log("Step 4: State updated successfully.");
 
     } catch (error) {
-      // 4. If an error occurs, update the store with a specific message
+      // DEBUG: Log the full error object if something goes wrong
+      console.error("An error occurred in the fetchWord function:", error);
+
       if (error.response && error.response.status === 404) {
-        set({ error: 'Word not found. Please check the spelling.', isLoading: false });
+        set({ error: 'Word not found. Please check the spelling and try again.', loading: false, wordData: null });
       } else {
-        set({ error: 'An unexpected error occurred. Please try again.', isLoading: false });
+        set({ error: 'An unexpected error occurred. Please try again later.', loading: false, wordData: null });
       }
     }
   },
