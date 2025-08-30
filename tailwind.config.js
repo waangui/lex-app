@@ -15,8 +15,8 @@ export default {
         accent: "#EAB308",     // Yellow
       },
       fontFamily: {
-        heading: ['"Roboto Mono"', "monospace"],
-        body: ['Roboto', "sans-serif"],
+        'franklin': ['"Libre Franklin"', 'sans-serif'],
+        'baskerville': ['"Libre Baskerville"', 'serif'],
       },
     },
   },
