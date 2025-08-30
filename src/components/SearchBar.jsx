@@ -1,30 +1,33 @@
 import React, { useState } from 'react';
 import useDictionaryStore from "../store/DictionaryStore.js";
+import './SearchBar.css';
 
-// SearchBar Component: Handles user input and triggers the search
+// SearchBar Component: Handles user input and triggers the searc
 function SearchBar() {
-  const [inputValue, setInputValue] = useState('');
-  // fetchWord function from our Zustand store
+  const [searchTerm, setSearchTerm] = useState('');
   const fetchWord = useDictionaryStore((state) => state.fetchWord);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (inputValue.trim()) {
-      fetchWord(inputValue.trim());
+    if (searchTerm) {
+      fetchWord(searchTerm);
     }
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="search-container">
       <input
         type="text"
-        value={inputValue}
-        onChange={(e) => setInputValue(e.target.value)}
-        placeholder="search for a word..."
-        style={{ width: '300px', padding: '10px', fontSize: '16px' }}
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+        placeholder="Search for a word..."
+        className="search-input"
       />
-      <button type="submit" style={{ padding: '10px', fontSize: '16px' }}>
-        Search
+      <button type="submit" className="search-button">
+        {/* SVG Icon for the search button */}
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+        </svg>
       </button>
     </form>
   );

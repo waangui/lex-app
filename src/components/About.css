@@ -1,0 +1,45 @@
+/* Main container for the About page content */
+.about-container {
+  padding: 0 20px;
+  text-align: center;
+  max-width: 600px; /* Give it a max-width for better readability */
+}
+
+.about-container h2 {
+  font-family: var(--font-baskerville);
+  color: var(--color-secondary);
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.about-container p {
+  font-family: var(--font-franklin);
+  color: var(--color-secondary);
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.about-container a {
+  color: var(--color-accent);
+}
+
+/* Styles for the 'Back to Search' button */
+.back-button {
+  display: inline-block; 
+  padding: 12px 24px;
+  margin-top: 20px;
+  font-family: var(--font-franklin); 
+  font-size: 16px;
+  color: var(--color-secondary);
+  background-color: transparent;
+  border: 2px solid var(--color-accent);
+  border-radius: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.back-button:hover {
+  background-color: var(--color-accent);
+  color: var(--color-text);
+}

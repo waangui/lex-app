@@ -1,0 +1,54 @@
+.definition-container {
+  max-width: 600px ;
+  border: 4.5px solid var(--color-secondary);
+  border-radius: 35px; /* rounded corner */
+  padding: 24px;
+  background-color: #fff; 
+}
+
+.word-header  {
+  font-family: var(--font-baskerville);
+  font-size: 2rem; /* 48px */
+  font-weight: 700;
+  color: var(--color-dark-text);
+  margin: 0;
+}
+
+.phonetic  {
+  font-family: var(--font-franklin);
+  font-size: 1.2rem; 
+  color: #555;
+  margin-top: 5px;
+}
+
+.meaning-block {
+  margin-top: 24px;
+}
+
+.part-of-speech {
+  font-family: var(--font-franklin);
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--color-dark-text);
+  margin: 0;
+  padding-bottom: 8px;
+  
+}
+
+.definition-list {
+  list-style-type: none;
+  padding-left: 20px;
+  font-family: var(--font-franklin);
+  font-size: 1.125rem; /* 16px */
+  color: #333;
+}
+
+.definition-list li {
+  margin-bottom: 12px;
+}
+
+.definition-list .example {
+  color: #777;
+  font-style: italic;
+  margin-top: 5px;
+}

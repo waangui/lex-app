@@ -1,0 +1,52 @@
+/* Container for the search form to enable flexbox layout */
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 670px; 
+   
+}
+
+/* Styles for the text input field */
+.search-input {
+  width: 100%;
+  padding: 15px 50px 15px 20px; /* Add extra padding on the right for the icon */
+  font-family: var(--font-baskerville);
+  font-size: 18px;
+  color: var(--color-secondary);
+  background-color: #fff;
+  border: 3.5px solid var(--color-accent);
+  border-radius: 30px; 
+  outline: none;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.search-input::placeholder {
+  color: #00000039; 
+  font-family: var(--font-baskerville);
+  font-size: 1.25rem;
+}
+
+.search-input:focus {
+  box-shadow: 0 0 0 3px rgba(221, 161, 94, 0.4); /* Accent color glow on focus */
+}
+
+/* Styles for the search icon */
+.search-button {
+  position: absolute;
+  right: 15px;
+  height: 100%;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-button svg {
+  width: 34px;
+  height: 34px;
+  stroke: var(--color-secondary);
+}
