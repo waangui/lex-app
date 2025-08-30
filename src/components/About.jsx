@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import useDictionaryStore from '../store/DictionaryStore.js';
 import './About.css';
 
 function About() {
+  const resetSearch = useDictionaryStore((state) => state.resetSearch);
 
   return (
     <div className='about-container'>
@@ -16,7 +18,7 @@ function About() {
       </p>
       <div style={{ textAlign: 'center' }}>
          {/* This Link component navigates back to the root path ("/") */}
-         <Link to="/" className='back-button'>
+         <Link to="/" className='back-button' onClick={resetSearch}>
             Back to Search
          </Link>
       </div>

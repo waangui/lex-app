@@ -3,12 +3,15 @@ import { Routes, Route, Link } from 'react-router-dom';
 import SearchBar from './components/SearchBar'
 import DefinitionDisplay from './components/DefinitionDisplay'
 import About from './components/About';
+import useDictionaryStore from './store/DictionaryStore.js';
 import './App.css';
 
 
 
 // Main App Component: Assembles the other components
 function App() {
+  // to reset the search page
+  const resetSearch = useDictionaryStore((state) => state.resetSearch);
 
   // A simple component to group the home page content
   const HomePage = () => (
@@ -23,7 +26,9 @@ function App() {
   return (
     <div className="app-container">
       <header className="app-header">
-        <h1>LEX Dictionary</h1>
+        <Link to="/" onClick={resetSearch} className="header-link">
+          <h1 className='app-title'>LEX Dictionary</h1>
+        </Link>
       </header>
 
       <main className="main-content">

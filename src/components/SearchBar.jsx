@@ -3,6 +3,7 @@ import useDictionaryStore from "../store/DictionaryStore.js";
 import './SearchBar.css';
 
 // SearchBar Component: Handles user input and triggers the searc
+
 function SearchBar() {
   const [searchTerm, setSearchTerm] = useState('');
   const fetchWord = useDictionaryStore((state) => state.fetchWord);

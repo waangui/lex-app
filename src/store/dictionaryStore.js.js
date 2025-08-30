@@ -30,6 +30,10 @@ const useDictionaryStore = create((set) => ({
       }
     }
   },
+
+  // reset the search state
+  resetSearch: () => set({ wordData: null, error: null, loading: false }),
+
 }));
 
 export default useDictionaryStore;
