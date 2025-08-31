@@ -54,15 +54,15 @@ function DefinitionDisplay() {
         </div>
       ))}
       
-      {/* Origin */}
-      {wordResult.origin && (
+      {/* Origin - Future Update*/}
+      {/* {wordResult.origin && (
         <div className="meaning-block">
           <h4 className="part-of-speech">Origin</h4>
            <ul className="definition-list">
             <li>{wordResult.origin}</li>
           </ul>
         </div>
-      )}
+      )} */}
     </div>
   );
 }
