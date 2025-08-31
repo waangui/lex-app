@@ -43,14 +43,14 @@ function DefinitionDisplay() {
       {(wordResult.meanings || []).map((meaning, index) => (
         <div key={index} className="meaning-block">
           <h3 className="part-of-speech">{meaning.partOfSpeech}</h3>
-          <ul className="definition-list">
+          <ol className="definition-list">
             {(meaning.definitions || []).map((def, i) => (
               <li key={i}>
                 {def.definition}
                 {def.example && <p className="example"><em>"{def.example}"</em></p>}
               </li>
             ))}
-          </ul>
+          </ol>
         </div>
       ))}
       
